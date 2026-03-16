@@ -1,5 +1,10 @@
 
 
+.cta-wrapper{
+    max-width: 850px;
+    margin: auto;
+}
+
     .cmain {
         position: relative;
         overflow: visible;

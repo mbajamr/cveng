@@ -79,3 +79,24 @@
             }
 
 
+
+            function openPopup(page){
+
+            fetch(page)
+            .then(response => response.text())
+            .then(html => {
+
+            document.getElementById("modal-content").innerHTML = html;
+
+            document.getElementById("popupModal").classList.add("is-active");
+
+            });
+
+            }
+
+            function closeModal(){
+
+            document.getElementById("popupModal").classList.remove("is-active");
+
+            }
+

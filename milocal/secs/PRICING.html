@@ -1,75 +1,115 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiLocal.com</title>
-    <link href="../code/css/stylesPRICING.css" rel="stylesheet">
-    <link href="../code/css/stylesHEADER.css" rel="stylesheet">
-    <link href="../code/css/stylesBUTTON.css" rel="stylesheet">
-    <link href="../code/css/stylesMAIN.css" rel="stylesheet">
-    <link href="../code/css/stylesCOMMON.css" rel="stylesheet">
-
+    <title>Precios y Servicios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        h2.txt-ac { text-align: center; }
+        .billing-options { text-align: center; margin-bottom: 2rem; }
+        .billing-options input[type="radio"] { margin-right: 0.5rem; }
+        .billing-options label { margin-right: 1rem; cursor: pointer; }
+        .pricing-card { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+        .pricing-card .price { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+        .pricing-card ul { text-align: left; margin-bottom: 1.5rem; padding-left: 1rem; }
+        .pricing-card .button { margin-top: auto; }
+    </style>
 </head>
-<script src="../code/js/scriptAJAX.js"></script>
-<script src="../code/js/scriptPRICING.js"></script>
-<script src="../code/js/scriptCOMMON.js"></script>
-<script src="../code/js/scriptHEADER.js"></script>
-<script src="../code/js/scriptBUTTON.js"></script>
-
 <body>
+    <section class="section">
+        <div class="container">
+            <!-- MAIN TITLE -->
+            <h2 class="title is-3 txt-ac txt-fw txt-ws">Precios y Servicios</h2>
 
+            <!-- Radio Buttons -->
+            <div class="billing-options">
+                <input type="radio" id="monthly" name="billing" value="monthly" checked>
+                <label for="monthly">Mensual</label>
+                <input type="radio" id="annual" name="billing" value="annual">
+                <label for="annual">Anual</label>
+            </div>
 
-<div id="HEADER"></div>
+            <!-- Pricing Columns -->
+            <div class="columns is-multiline is-variable is-3">
 
+                
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <div class="pricing-card has-text-centered">
+                        <h3 class="title is-5">Básico</h3>
+                        <div class="price">Gratis</div>
+                        <ul>
+                            
+                                <li>Editar Texto</li>
+                            
+                                <li>Editar Fotos</li>
+                            
+                                <li>Editar Horario</li>
+                            
+                        </ul>
+                        <button class="button is-link is-fullwidth"
+                            onclick="window.open('https://www.google.com', '_blank')">
+                            ¡Regístrate aquí!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <div class="pricing-card has-text-centered">
+                        <h3 class="title is-5">Intermedio</h3>
+                        <div class="price">100 MXN</div>
+                        <ul>
+                            
+                                <li>Editar Texto</li>
+                            
+                                <li>Editar Fotos</li>
+                            
+                                <li>Editar Horario</li>
+                            
+                                <li>Alta Encuestas</li>
+                            
+                                <li>Alta Vacantes</li>
+                            
+                        </ul>
+                        <button class="button is-info is-fullwidth"
+                            onclick="window.open('https://www.google.com', '_blank')">
+                            ¡Regístrate aquí!
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="column is-12-mobile is-6-tablet is-4-desktop">
+                    <div class="pricing-card has-text-centered">
+                        <h3 class="title is-5">Avanzado</h3>
+                        <div class="price">2,000 MXN</div>
+                        <ul>
+                            
+                                <li>Editar Texto</li>
+                            
+                                <li>Editar Fotos</li>
+                            
+                                <li>Editar Horario</li>
+                            
+                                <li>Alta Encuestas</li>
+                            
+                                <li>Alta Vacantes</li>
+                            
+                                <li>Reporte Tráfico</li>
+                            
+                                <li>Reporte Visitas</li>
+                            
+                        </ul>
+                        <button class="button is-success is-fullwidth"
+                            onclick="window.open('https://www.google.com', '_blank')">
+                            ¡Regístrate aquí!
+                        </button>
+                    </div>
+                </div>
+                
 
-    <!-- ************************************************************** -->
-
-    <!-- MAIN TITLE -->
-    <h2 class="txt-ac txt-b txt-fw txt-ws">Precios y Servicios</h2> 
-
-<!-- Pricing Table Section -->
-<div id="tabla" class="ctbl ccw800 txt-ac">
-    <!-- Radio buttons for selection -->
-    <div>
-        <input type="radio" id="monthly" name="billing" value="monthly" checked onclick="updatePrices()"> 
-        <label for="monthly">Mensual</label>
-        <input type="radio" id="annual" name="billing" value="annual" onclick="updatePrices()"> 
-        <label for="annual">Anual</label>
-    </div>
-
-    <!-- Pricing Table -->
-    <table id="tabla2" >
-
-                <th>===Básico===</th>
-                <th>=Intermedio=</th>
-                <th>==Avanzado==</th>
-
-        <tr>
-            <!-- Row for pricing -->
-                <td id="basic-price">Gratis</td>
-                <td id="intermediate-price">100 MXN</td>
-                <td id="advanced-price">1,000 MXN</td>
-        </tr>
-
-        <!-- Features section outside the table -->
-
-        <tr>
-                <td style="text-align: left;"><li>Editar Texto</li><li>Editar Fotos</li><li>Editar Horario</li></td>
-                <td style="text-align: left;"><li>Editar Texto</li><li>Editar Fotos</li><li>Editar Horario</li><li>Alta Encuestas</li><li>Alta Vacantes</li></td>
-                <td style="text-align: left;"><li>Editar Texto</li><li>Editar Fotos</li><li>Editar Horario</li><li>Alta Encuestas</li><li>Alta Vacantes</li><li>Reporte Tráfico</li><li>Reporte Visitas</li></td>
-        </tr>
-    </table>
-
-    <!-- Register buttons -->
-    <div >
-		<label class="btn-lbl btn-mw" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
-		<label class="btn-lbl btn-mw" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
-		<label class="btn-lbl btn-mw" onclick="handleClick('https://www.google.com')">¡Registrate aquí!</label>
-    </div>
-</div>
-
+            </div>
+        </div>
+    </section>
 </body>
 
 <script type="text/javascript">

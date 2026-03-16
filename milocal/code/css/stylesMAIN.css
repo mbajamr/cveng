@@ -41,19 +41,20 @@
             font-size: 18px;
         }
         svg {
-            width: 140%;   /* Reduce the size on smaller screens */
+            width: 150%;   /* Reduce the size on smaller screens */
             height: auto;
         }
         table {
-            width: 20%; /* Ensure table uses full available width */
+            width: 50%; /* Ensure table uses full available width */
                 }
 
         td, th {
+            font-size: .4em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: .4em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 20%;
@@ -85,15 +86,16 @@
             height: auto;
         }
         table {
-            width: 30%; /* Ensure table uses full available width */
+            width: 60%; /* Ensure table uses full available width */
                 }
 
         td, th {
+            font-size: .5em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: .5em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 20%;
@@ -124,15 +126,16 @@
             height: auto;
         }
         table {
-            width: 40%; /* Ensure table uses full available width */
+            width: 70%; /* Ensure table uses full available width */
                 }
 
         td, th {
+            font-size: .6em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: .6em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 22%;
@@ -164,15 +167,16 @@
             height: auto;
         }
         table {
-            width: 50%; /* Ensure table uses full available width */
+            width: 80%; /* Ensure table uses full available width */
                 }
 
         td, th {
+            font-size: .7em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: .7em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 24%;
@@ -204,15 +208,16 @@
             height: auto;
         }
         table {
-            width: 70%; /* Ensure table uses full available width */
+            width: 90%; /* Ensure table uses full available width */
                 }
 
         td, th {
+            font-size: .8em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: .8em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 26%;
@@ -244,15 +249,16 @@
             height: auto;
         }
         table {
-            width: 90%; /* Ensure table uses full available width */
+            width: 95%; /* Ensure table uses full available width */
                 }
 
         td, th {
+            font-size: .9em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: .9em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 28%;
@@ -288,11 +294,12 @@
                 }
 
         td, th {
+            font-size: 1em; /* Adjust font size inside table cells */
             padding: 10px;   /* Adjust padding for readability */
         }
 
         tr {
-            padding: 10px;   /* Adjust padding for readability */
+            font-size: 1em; /* Ensure font size is consistent within rows */
         }
         .btn-mw {
             width: 30%;

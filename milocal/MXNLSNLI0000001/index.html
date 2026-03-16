@@ -8,16 +8,19 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
             <!-- Bootstrap CSS CDN -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
             <link href="../code/css/stylesCAROUSEL.css" rel="stylesheet">
             <link href="../code/css/stylesCOMMON.css" rel="stylesheet">
-            <link href="../code/css/stylesCONTAINERS.css" rel="stylesheet">
-            <link href="../code/css/stylesSERVICES.css" rel="stylesheet">
+            <link href="../code/css/stylesDARKMODE.css?v=1.0.1" rel="stylesheet">
+            <link href="../code/css/stylesMAIN.css" rel="stylesheet">
+            <!--
             <link href="../code/css/stylesSHARE.css" rel="stylesheet">
             <link href="../code/css/stylesSCHEDULE.css?v=1.0.1" rel="stylesheet">
-            <link href="../code/css/stylesDARKMODE.css?v=1.0.1" rel="stylesheet">
+            <link href="../code/css/stylesSERVICES.css" rel="stylesheet">
             <link href="../code/css/stylesHEADER.css" rel="stylesheet">
             <link href="../code/css/stylesBUTTON.css" rel="stylesheet">
-            <link href="../code/css/stylesMAIN.css" rel="stylesheet">
+            <link href="../code/css/stylesCONTAINERS.css" rel="stylesheet">
+            -->
         
         </head>
         
@@ -59,11 +62,22 @@
         <div id="OWNERHDR"></div>
         <div id="OWNER"></div>
         
-            <section>
-                <div class='info-container'>
-                    <label class="btn-lbl btn-whl" onclick="handleClick('../secs/TERMS.html')">Términos y Condiciones</label>
-                </div>
-            </section>
+            <div id="popupModal" class="modal">
+              <div class="modal-background" onclick="closeModal()"></div>
+
+              <div class="modal-card" style="width:90%; max-width:1000px;">
+
+                <header class="modal-card-head">
+                  <p class="modal-card-title">Page</p>
+                  <button class="delete" onclick="closeModal()"></button>
+                </header>
+
+                <section id="modal-content" class="modal-card-body">
+                  Loading...
+                </section>
+
+              </div>
+            </div>
         
         </body>
         <script src="../code/js/scriptCOMMON.js"></script>
@@ -72,6 +86,8 @@
         <script src="code/js/scriptCAROUSEL.js"></script>
         <script src="../code/js/scriptHEADER.js"></script>
         <script src="../code/js/scriptBUTTON.js"></script>
+        <script src="code/js/open_hours.js"></script>
+        <script src="../code/js/schedule_logic.js"></script>
         <script>
             //alert(window.innerWidth); 
             // Listen for changes in localStorage and update the theme in all tabs
@@ -98,5 +114,13 @@
         show2Secs('../secs/PROMOS.html','PROMOS','../hdr/PROMOS.html','PROMOSHDR');
         show2Secs('../secs/OWNER.html','OWNER','../hdr/OWNER.html','OWNERHDR');
         </script>
+        
+        
+        <footer class="footer">
+          <div class="content has-text-centered">
+            <p>© 2025 CiberLocal </p>
+          </div>
+        </footer>
+
         </html>
         

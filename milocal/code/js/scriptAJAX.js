@@ -3,7 +3,7 @@ var xmlHttp = new Array();
 var xi = new Array(0); // ARRAY OF XML-HTTP REQUEST INDEXES
 xi[0] = 1; // FIRST INDEX SET TO 1 MAKING IT AVAILABLE
 
-function showData(url, celda){ 
+function showData(url, celda, runExtraJS = null){ 
 return new Promise(function(resolve, reject) {  // Returning a Promise
 var xmlHttpIndex = xi.length;
 var myClass;
@@ -49,12 +49,13 @@ xmlHttp[xmlHttpIndex].send(null);
 });
 }
 
-function show2Secs(url1,celda1,url2,celda2){ 
-    showData(url1,celda1)
+function show2Secs(url1,celda1,url2,celda2,runExtraJS = null){ 
+    showData(url1,celda1,runExtraJS)
     .then(function(result) {
         //console.log(result); // "Request successful"
-        showData(url2,celda2);
+        showData(url2,celda2,runExtraJS);
     })
+
     .catch(function(error) {
         console.log(error); // "Request failed" or "AJAX not supported"
         checkSectionAndGreyOut(celda1);
