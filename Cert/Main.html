@@ -1,7 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta site="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Cert Menu + Table</title>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     MENU
+     ====================================================== -->
+
+<div class="cert-menu">
+
+
+    <!-- =================================================
+         CARD
+         ================================================== -->
+
+
+
+<!--
+//     =====================================================
+//     7. HORIZONTAL MENU
+//     ===================================================== 
+
+<h2>7. Horizontal Navigation</h2>
+
+<div class="example">
+
+    <div class="demo-area">
+
+        <nav class="menu7">
+
+            <a href="#">Home</a>
+
+            <div class="drop">
+
+                <a href="#">AWS ▾</a>
+
+                <div class="drop-menu">
+
+                    <a onclick="filterCerts('AWS')">AWS</a>
+					<a onclick="filterCerts('AWS')">AWS</a>
+					<a onclick="filterCerts('AWS')">AWS</a>
+					<a onclick="filterCerts('AWS')">AWS</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="drop">
+
+                <a href="#">AGILE ▾</a>
+
+                <div class="drop-menu">
+
+        <a onclick="filterCerts('AGILE')">AGILE</a>
+		<a onclick="filterCerts('AGILE')">AGILE</a>
+		<a onclick="filterCerts('AGILE')">AGILE</a>
+		<a onclick="filterCerts('AGILE')">AGILE</a>
+
+                </div>
+
+            </div>
+
+            <a href="#">Contact</a>
+
+        </nav>
+
+    </div>
+
+</div>
+
+TEST
+
+
+<nav class="navbar">
+    <div class="nav-links" id="navLinks">
+        <a onclick="filterCerts('All')">ALL</a>
+		<a onclick="filterCerts('AWS')">AWS</a>
+		<a onclick="filterCerts('AGILE')">AGILE</a>
+		<a onclick="filterCerts('AZURE')">AZURE</a>
+		<a onclick="filterCerts('ORACLE')">ORACLE</a>
+		<a onclick="filterCerts('ITIL')">ITIL</a>
+		
+    </div>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+        ☰
+    </button>
+</nav>
+
+
+				<div class="svg-icon">
+					<strong>ALL</strong>
+				</div>
+
+				<div class="category-site" onclick="filterCerts('AWS')">
+					All Certs
+				</div>
+
+				<div
+					class="category-count"
+					id="count-All">
+				</div>
+
+
+
+
+            // AWS 
+
+				<div class="svg-icon">
+					<strong>AWS</strong>
+				</div>
+
+				<div class="category-site" onclick="filterCerts('AWS')">
+					AWS
+				</div>
+
+				<div
+					class="category-count"
+					id="count-AWS">
+				</div>
+
+
+
+
+            // AGILE 
+
+            <div
+                class="category-option"
+                onclick="filterCerts('AGILE')">
+
+				<div class="svg-icon">
+					<img class="img-fluid" src="https://scaledagile.com/wp-content/themes/salsa-theme/assets/images/safe-logo.svg" alt="" width="100" height="100">
+				</div>
+
+                <div>
+
+                    <div class="category-site">
+                        AGILE
+                    </div>
+
+                    <div
+                        class="category-count"
+                        id="count-AGILE">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            // azure 
+
+            <div
+                class="category-option"
+                onclick="filterCerts('AZURE')">
+
+				<div class="svg-icon">
+					<strong>AZURE</strong>
+				</div>
+
+                <div>
+
+                    <div class="category-site">
+                        AZURE
+                    </div>
+
+                    <div
+                        class="category-count"
+                        id="count-AZURE">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            // ORACLE
+
+            <div
+                class="category-option"
+                onclick="filterCerts('ORACLE')">
+
+				<div class="svg-icon">
+					<strong>ORACLE</strong>
+				</div>
+
+                <div>
+
+                    <div class="category-site">
+                        ORACLE
+                    </div>
+
+                    <div
+                        class="category-count"
+                        id="count-ORACLE">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            // ITIL
+
+            <div
+                class="category-option"
+                onclick="filterCerts('ITIL')">
+
+				<div class="svg-icon">
+					<strong>ITIL</strong>
+				</div>
+
+                <div>
+
+                    <div class="category-site">
+                        ITIL
+                    </div>
+
+                    <div
+                        class="category-count"
+                        id="count-ITIL">
+                    </div>
+
+                </div>
+
+            </div>
+
 
     <div class="svg-menu">
 
-        <!-- BUTTON -->
+        // BUTTON
 
         <a href="#" class="svg-menu-button">
 
@@ -16,21 +262,21 @@
         </a>
 
 
-        <!-- =====================================
-             DROPDOWN CARD
-             ===================================== -->
+        // =====================================
+        //     DROPDOWN CARD
+        //     =====================================
 
         <div class="svg-dropdown">
 
 
-            <!-- HEADER -->
+            // HEADER
 
             <div class="svg-dropdown-header">
 
                 <div>
 
                     <h2 class="svg-dropdown-title">
-                        Choose an option from list
+                        Choose an option
                     </h2>
 
                     <p class="svg-dropdown-subtitle">
@@ -42,18 +288,18 @@
             </div>
 
 
-            <!-- =================================
-                 OPTIONS
-                 ================================= -->
+            //     =================================
+            //     OPTIONS
+            //     =================================
 
             <div class="svg-grid">
 
 
-                <!-- =============================
-                     AWS
-                     ============================= -->
+                //     =============================
+                //     AWS
+                //     ============================= 
 
-                <div class="category">
+                <div class="category" onclick="filterCerts('AWS')>
                     AWS
                 </div>
 
@@ -134,9 +380,9 @@
                 </a>
 
 
-                <!-- =============================
-                     AGILE
-                     ============================= -->
+                //     =============================
+                //     AGILE
+                //     ============================= 
 
                 <div class="category">
                     Agile
@@ -216,9 +462,9 @@
 
                 </a>
 
-                <!-- =============================
-                     AZURE
-                     ============================= -->
+                //     =============================
+                //     AZURE
+                //     ============================= 
 
                 <div class="category">
                     Azure
@@ -244,9 +490,9 @@
                 </a>
 
 
-                <!-- =============================
-                     ORACLE
-                     ============================= -->
+                //     =============================
+                //     ORACLE
+                //     =============================
 
                 <div class="category">
                     Oracle
@@ -417,9 +663,9 @@
                     </div>
                 </a>
 
-                <!-- =============================
-                     OTHERS
-                     ============================= -->
+                //     =============================
+                //     OTHERS
+                //     ============================= 
 
                 <div class="category">
                     Others
@@ -445,23 +691,136 @@
         </div>
 
     </div>
+*/
+
+<!-- =====================================================
+     TABLE
+     ====================================================== -->
+
+<div class="table-certd">
+
+
+    <!-- CONTROLS -->
+
+    <div class="controls">
+
+        <input
+            type="text"
+            id="search"
+            class="search"
+            placeholder="🔍 Search certs..."
+        >
+
+
+        <select id="categorySelect">
+
+            <option value="All">
+                All Categories
+            </option>
+
+            <option value="AWS">
+                AWS
+            </option>
+
+            <option value="AGILE">
+                AGILE
+            </option>
+
+            <option value="AZURE">
+                AZURE
+            </option>
+
+            <option value="ORACLE">
+                ORACLE
+            </option>
+
+            <option value="ITIL">
+                ITIL
+            </option>
+
+        </select>
+
+
+        <select id="sortSelect">
+
+            <option value="category">
+                Sort by Category
+            </option>
+
+            <option value="site">
+                Sort by Name
+            </option>
+
+            <option value="year">
+                Sort by Year
+            </option>
+
+
+
+        </select>
+
+
+    </div>
+
+
+    <!-- TABLE -->
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>
+                    Org
+                </th>
+
+                <th>
+                    Cert
+                </th>
+
+                <th>
+                    Category
+                </th>
+
+                <th>
+                    Year
+                </th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody id="certTable">
+
+        </tbody>
+
+    </table>
+
+
+    <div
+        id="noResults"
+        class="no-results">
+
+        No certs found.
+
+    </div>
+
+
+</div>
+
+
+</div>
+
 
 
 </body>
 
 </html>
 
-			<div class="dropdown">
-                 <a href="#" class="nav-link">Certifications and trainings ▾</a>
-				<nav class="dropdown-menu">
-                   
-
-		<li><a class="nav-link" href="#" onclick="showData('Cert/AWS.html','Principal');">AWS</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Cert/Agile.html','Principal');">Agile</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Cert/Oracle.html','Principal');">Oracle</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Cert/Azure.html','Principal');">Azure</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Cert/Cursos.html','Principal');">Others</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Cert/Cert.html','Principal');">All</a></li>
-
-                </nav>
-            </div>
+<!--
+<script type="text/javascript">
+filterCerts('All');
+</script>
+-->
