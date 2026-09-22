@@ -1,9 +1,17 @@
 
-		<li><a class="nav-link" href="#" onclick="showData('Base/Menu.html','Menu');showData('Base/SubMenu.html','SubMenu');showData('Base/Perfil.html','Principal');">Profile</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('EP/Menu.html','Menu');showData('EP/SubMenu.html','SubMenu');showData('EP/ATele.html','Principal');">Professional Experience</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Ed/Menu.html','Menu');showData('Ed/SubMenu.html','SubMenu');showData('Ed/MBA.html','Principal');">Education</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Sk/Menu.html','Menu');showData('Sk/SubMenu.html','SubMenu');showData('Sk/PrimaryProfile.html','Principal');">Skills</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('Cert/Menu.html','Menu');showData('Cert/SubMenu.html','SubMenu');showData('Cert/Cert.html','Principal');">Certification</a></li>
-		<li><a class="nav-link" href="#" onclick="showData('P/Menu.html','Menu');showData('P/SubMenu.html','SubMenu');showData('P/QPS.html','Principal');">Relevant Projects</a></li>
+		<li><a class="nav-link" href="#" onclick="showData('Base/Menu.html','Menu');showData('Base/SubMenu.html','SubMenu');showData('Base/Main.html','Principal');hideSection('contentSection3');showSection('contentSection1');showSection('contentSection2');">Profile</a></li>
+		<li><a class="nav-link" href="#" onclick="showData('EP/Menu.html','Menu');showData('EP/SubMenu.html','SubMenu');showData('EP/AFinancial.html','Principal');hideSection('contentSection3');showSection('contentSection1');showSection('contentSection2');">Professional Experience</a></li>
+		
+		<!--<li><a class="nav-link" href="#" onclick="showData('Ed/Menu.html','Menu');showData('Ed/SubMenu.html','SubMenu');showData('Ed/MBA.html','Principal');hideSection('contentSection3');showSection('contentSection1');showSection('contentSection2');">Education</a></li>-->
+		<li><a class="nav-link" href="#" onclick="showData('Ed/Main.html','PrincipalWide');hideSection('contentSection1');hideSection('contentSection2');showSection('contentSection3');">Education</a></li>
+		<li><a class="nav-link" href="#" onclick="showData('Sk/Main.html','PrincipalWide');hideSection('contentSection1');hideSection('contentSection2');showSection('contentSection3');">Skills</a></li>
+
+		<!--<li><a class="nav-link" href="#" onclick="showData('Sk/Menu.html','Menu');showData('Sk/SubMenu.html','SubMenu');showData('Sk/PrimaryProfile.html','Principal');hideSection('contentSection3');showSection('contentSection1');showSection('contentSection2');">Skills</a></li>-->
+		
+		<!--<li><a class="nav-link" href="#" onclick="showData('Cert/Menu.html','Menu');showData('Cert/SubMenu.html','SubMenu');showData('Cert/Cert.html','Principal');">Certification</a></li>-->
+		<li><a class="nav-link" href="#" onclick="showData('Cert/Main.html','PrincipalWide');hideSection('contentSection1');hideSection('contentSection2');showSection('contentSection3');updateCounts('All');filterCerts('All');">Certification</a></li>
+		<li><a class="nav-link" href="#" onclick="showData('P/Menu.html','Menu');showData('P/SubMenu.html','SubMenu');showData('P/QPS.html','Principal');hideSection('contentSection3');showSection('contentSection1');showSection('contentSection2');">Relevant Projects</a></li>
+
+
 
 
