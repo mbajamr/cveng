@@ -69,3 +69,10 @@
    
 })(jQuery);
 
+function showSection(sectionId) {
+    document.getElementById(sectionId).style.display = 'block';
+}
+
+function hideSection(sectionId) {
+    document.getElementById(sectionId).style.display = 'none';
+}
