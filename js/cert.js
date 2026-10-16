@@ -45,14 +45,14 @@ const certs =
   },
   {
     "site": "https://www.scrumstudy.com/certification/certification-registry?FirstName=joel&LastName=martinez&Country=mexico&credential=11",
-    "image": "https://media.licdn.com/dms/image/v2/D562DAQFW_czsWXXMpg/profile-treasury-image-shrink_1920_1920/B56aCwIjGVHUAc-/0/1789661426349?e=1790269200&v=beta&t=P1pMHTE6tyU45BjPL_cVhNSFI3CfddC_FiFSYbsDxSI",
+    "image": "https://mbajamr.com/img/SMC.webp",
     "year": "May 2017",
     "certification": "Scrum Master Certified",
     "category": "AGILE"
   },
   {
     "site": "https://www.scrumstudy.com/certification/certification-registry?FirstName=joel&LastName=martinez&Country=mexico&credential=11",
-    "image": "https://media.licdn.com/dms/image/v2/D562DAQGlOEQCd56R-g/profile-treasury-image-shrink_1920_1920/B56aCwIMyIIkAc-/0/1789661334891?e=1790269200&v=beta&t=_LNBCIBbXkOtCJI2DrowuFPEN6S44eiBv_NsuBKodfg",
+    "image": "https://mbajamr.com/img/SMF.png",
     "year": "November 2016",
     "certification": "Scrum Fundamentals Certified",
     "category": "AGILE"
@@ -154,7 +154,7 @@ const certs =
    CURRENT FILTER
    ========================================================= */
 
-let currentCategory = "All";
+//let currentCategory = "All";
 
 
 /* =========================================================
@@ -163,24 +163,53 @@ let currentCategory = "All";
 
 function displayCerts() {
 
-
+	let searchValue = "All";
+	let sortValue = "category";
     const table =
         document.getElementById("certTable");
 
-
     const search =
         document
-            .getElementById("search")
-            .value
-            .toLowerCase();
+            .getElementById("search");
 
+	if (search !== null) {
+		searchValue = search.value.toLowerCase();
+		console.log("search.value: "+search.value)
+	}
+	else
+	{
+		searchValue = "";
+		return;
+	}
 
     const sort =
         document
-            .getElementById("sortSelect")
-            .value;
+            .getElementById("sortSelect");
 
+	if (sort !== null) {
+		sortValue = sort.value;
+		console.log("sort.value: "+sort.value);
+	}
+	else
+	{
+		sortValue = "";
+		return;
+	}
 
+    const category =
+        document
+            .getElementById("categorySelect");
+
+	if (category !== null) {
+		categoryValue = category.value;
+		console.log("category.value: "+category.value)
+	}
+	else
+	{
+		categoryValue = "";
+		return;
+	}
+	
     /* FILTER */
 
     let filteredCerts =
@@ -189,15 +218,15 @@ function displayCerts() {
 
             const matchesCategory =
 
-                currentCategory === "All" ||
+                categoryValue === "All" ||
 
                 cert.category ===
-                currentCategory;
+                categoryValue;
 
 			const matchesSearch =
 				(cert.category + ' ' + cert.certification)
 					.toLowerCase()
-					.includes(search.toLowerCase());
+					.includes(searchValue.toLowerCase());
 
             return (
                 matchesCategory &&
@@ -206,13 +235,14 @@ function displayCerts() {
 
         });
 
-
-    /* SORT */
+    console.log("filteredCerts: "+filteredCerts)
+	
+	/* SORT */
 
     filteredCerts.sort((a, b) => {
 
 
-        if (sort === "site") {
+        if (sortValue === "site") {
 
             return a.site
                 .localeCompare(b.site);
@@ -220,14 +250,14 @@ function displayCerts() {
         }
 
 
-        if (sort === "year") {
+        if (sortValue === "year") {
 
             return b.year - a.year;
 
         }
 
 
-        if (sort === "category") {
+        if (sortValue === "category") {
 
             return a.category
                 .localeCompare(b.category);
@@ -306,17 +336,20 @@ function filterCerts(category) {
     currentCategory =
         category;
 
+	const vCategorySelect = document.getElementById("categorySelect");
 
-    /* Update SELECT */
-
-    document
-        .getElementById("categorySelect")
-        .value =
-        category;
-
+	if (vCategorySelect) {
+		if (currentCategory==null){
+		  vCategorySelect.value = "All";
+		} 
+		else
+		{	
+			console.log("currentCategory: "+currentCategory);
+			vCategorySelect.value = currentCategory;
+		}
+	}
 
     /* Refresh table */
-
     displayCerts();
 
 }
@@ -390,11 +423,11 @@ function updateCounts() {
         let count;
 
 
-        if (category === "All") {
+        //if (category === "All") {
 
-            count = certs.length;
+        //    count = certs.length;
 
-        } else {
+        //} else {
 
             count =
                 certs.filter(
@@ -403,7 +436,7 @@ function updateCounts() {
                         category
                 ).length;
 
-        }
+        //}
 
 
         document
@@ -451,7 +484,7 @@ function waitForElement(id) {
     });
 }
 
-
+/*
 async function setupSectionCatSel() {
 
     const mysection = await waitForElement("categorySelect");
@@ -460,8 +493,19 @@ async function setupSectionCatSel() {
         variableoutput = this.value;
         displayCerts();
     };
-}
 
+	const hash = window.location.hash.substring(1);
+	console.log ("hash2: " + hash);
+	
+	//const menu = document.getElementById("RP");
+	//console.log ("menu: " + menu);
+	//console.log ("menu.value: " + menu.value);
+
+	runWithHash(hash);
+	//runWithHash(hash+"/All");
+
+}
+*/
 
 async function setupSection() {
 
@@ -483,6 +527,17 @@ async function setupSection() {
         displayCerts();
     };
 
+    const mysection3 = await waitForElement("categorySelect");
+
+    mysection3.addEventListener("change",displayCerts);
+	
+	onchange = function() {
+        //variableoutput = this.value;
+		variableoutput = document.getElementById("categorySelect");
+        displayCerts();
+    };
+
+	
 }
 
 async function setupSectionDisplay() {

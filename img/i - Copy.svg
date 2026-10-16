@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+   Blue background circle -->
+  <circle cx="50" cy="50" r="50" fill="#0097d7" />
+  
+  <!-- Inner white circle -->
+  <circle cx="50" cy="50" r="41" fill="#ffffff" />
+  
+  <!-- Camera icon group outlined in the original blue -->
+  <g fill="none" stroke="#0097d7" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer camera body (square with octagonal corner cuts) -->
+    <path d="M 33 26 L 67 26 L 74 33 L 74 67 L 67 74 L 33 74 L 26 67 L 26 33 Z" />
+    
+    <!-- Central lens circle -->
+    <circle cx="50" cy="50" r="14.5" />
+    
+    <!-- Camera flash/aperture dot -->
+    <circle cx="66" cy="34" r="0.5" fill="#0097d7" stroke-width="3" />
+  </g>
+</svg>
