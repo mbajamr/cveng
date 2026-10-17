@@ -1,19 +1,214 @@
-<td>
-<table>
- <TR>
-  <td>
-  </br><b>Perfect Transportation</b>
-  </br>Perfect Transportation is an end-to-end transportation and supply-chain management system designed to provide visibility and control across the product value chain, from raw-material planning through manufacturing, shipment, transportation, delivery, installation, and final operation at the customer's site. The system integrates information from Oracle databases, the ERP, GPS systems, and external applications to provide a consolidated view of each product's status and location throughout its lifecycle.
-  </br>A central component of the system is transportation and shipment management. The system allows transportation plans to be created and monitored from the earliest stages of the process, including planned production dates, actual production dates, shipment scheduling, carrier information, delivery dates, and the product's current location. This enables the organization to begin planning transportation before manufacturing is completed and to continuously track the product as it moves through the supply chain.
-  </br>The system provides daily tracking of each transformer from the raw-material warehouse through production and shipment, continuing through transportation, delivery, installation, oil filling, and start-up at the customer's site. GPS information is incorporated to provide visibility into the product's location while in transit. This end-to-end tracking improves coordination between manufacturing, logistics, transportation, and the customer and provides the organization with timely information when delivery conditions change.
-  </br>The solution also integrates transportation information with Oracle and ERP data to generate operational and management indicators used to monitor the performance of the value chain. These include on-time delivery, on-time pickup, carrier performance, transportation costs and cost breakdowns, cost per unit, quality claims, and quality results. Reports can be generated for both domestic and international deliveries while accounting for their different operational requirements.
-  </br>An important architectural challenge was providing controlled access to information for different types of users while maintaining the company's security requirements. The system was integrated with Oracle Portal to provide controlled permissions for capturing, modifying, reading, and deleting information. It also incorporated an alert mechanism capable of generating different types of operational notifications and exceptions.
-  </br>The system included a customer-facing component that allowed customer-related information and images to be captured through the Internet. Because the Oracle Application Server environment was restricted from directly accessing external Internet sites for security reasons, a separate Internet-facing component was developed using Microsoft IIS, Active Server Pages (ASP), HTML, and JavaScript. The resulting information could be accessed and reviewed from mobile devices, extending visibility beyond the internal enterprise environment.
-  </br>The system maintained detailed information for each shipment, including customer, destination, transportation unit, dimensions, weight, carrier, planned and actual dates, and delivery status. This information enabled the organization to coordinate complex domestic and international transportation requirements and monitor the movement of products throughout the entire delivery process.
-  </br>Overall, Perfect Transportation transformed transportation management from a collection of disconnected production, shipment, and logistics activities into an integrated, traceable process. By combining ERP, Oracle, GPS, transportation, and customer information, the system provided a single operational view of the product's journey and gave the organization the information required to monitor delivery performance, transportation costs, carrier performance, quality, and customer service.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevant Projects</title>
 
-  </td>
- </TR>
-</table>
-</td>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #172033;
+            font-size: 28px;
+        }
+
+        .item {
+            background: #ffffff;
+            border: 1px solid #dfe4ea;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+        }
+
+        .item-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .item-header:hover {
+            background: #f8fafc;
+        }
+
+        .title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1e3a5f;
+        }
+
+        .toggle {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #1e3a5f;
+            border-radius: 50%;
+            background: white;
+            color: #1e3a5f;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .content {
+            display: none;
+            padding: 0 20px 20px 20px;
+            color: #4b5563;
+            line-height: 1.65;
+            font-size: 15px;
+            border-top: 1px solid #eef1f4;
+        }
+
+        .item.open .content {
+            display: block;
+        }
+
+        .item.open .toggle {
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Project: Perfect Transportation – End-to-End Transportation & Supply Chain Management</h1>
+
+    <!-- 1 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">1. Challenge</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">           
+
+The organization needed end-to-end visibility and control over the product value chain, from raw-material planning and manufacturing through shipment, transportation, delivery, installation, and final start-up at the customer's site.
+
+Information was distributed across Oracle databases, ERP systems, GPS platforms, and external applications, making it difficult to maintain a consolidated view of product location, delivery status, transportation costs, and carrier performance. The solution also needed to support domestic and international shipments, provide timely alerts, and enable controlled information sharing with customers while respecting enterprise security restrictions.
+
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">2. Objectives</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+- Integrate production, logistics, transportation, GPS, and customer information into a centralized monitoring environment.
+- Track each product throughout its lifecycle, from raw-material availability through delivery, installation, and start-up.
+- Enable transportation planning before manufacturing completion and monitor planned versus actual milestones.
+- Measure delivery performance, carrier effectiveness, transportation costs, and quality outcomes.
+- Support operational reporting for domestic and international shipments.
+- Implement role-based access controls and alerts for operational events and exceptions.
+- Provide secure customer-facing capabilities for accessing and submitting shipment-related information and images, including from mobile devices.
+
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">3. Actions</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+- Integrated information from Oracle databases, ERP systems, GPS platforms, and external applications to provide a consolidated view of product status and location.
+- Developed transportation-planning and shipment-tracking capabilities covering planned and actual production dates, shipment schedules, carriers, delivery dates, and current product location.
+- Implemented daily product tracking across the value chain, including raw-material warehousing, manufacturing, shipment, transportation, delivery, installation, oil filling, and start-up.
+- Incorporated GPS information to monitor products in transit and improve visibility into transportation progress.
+- Developed operational and management indicators covering on-time delivery, on-time pickup, carrier performance, transportation costs and cost breakdowns, cost per unit, quality claims, and quality results.
+- Supported reporting for both domestic and international deliveries, accommodating their different operational requirements.
+- Integrated the application with Oracle Portal to manage permissions for creating, modifying, viewing, and deleting information.
+- Implemented an alert mechanism to generate operational notifications and exceptions requiring attention.
+- Developed a separate Internet-facing component using Microsoft IIS, ASP, HTML, and JavaScript to support customer-facing functionality without requiring the restricted Oracle Application Server environment to access external Internet sites directly.
+- Enabled customer-related information and images to be captured through the Internet and reviewed from mobile devices.
+- Maintained detailed shipment records covering customer, destination, transportation unit, dimensions, weight, carrier, planned and actual dates, and delivery status.
+
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">4. Results</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+- End-to-end product traceability: Established visibility across the product lifecycle, from raw-material planning to installation and start-up at the customer's site.
+- Improved transportation planning: Enabled logistics teams to plan shipments in advance and monitor progress against planned production and delivery milestones.
+- Consolidated operational visibility: Integrated ERP, Oracle, GPS, and transportation information into a common monitoring environment.
+- Performance measurement: Provided indicators for delivery reliability, pickup punctuality, carrier performance, transportation costs, and quality outcomes.
+- Exception management: Introduced alerts to identify operational events and conditions requiring attention.
+- Controlled information sharing: Established differentiated access controls for internal users and customer-facing functionality.
+- Extended customer visibility: Enabled Internet-based access to relevant information and images, including through mobile devices.
+- Domestic and international support: Provided shipment records and reporting capabilities for different transportation scenarios and delivery requirements.
+
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">5. Business Impact</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+
+Transformed transportation management from disconnected production, shipment, and logistics activities into an integrated, traceable supply-chain process. By combining ERP, Oracle, GPS, carrier, and customer information, Perfect Transportation established a common operational view of each product's journey and provided the information needed to monitor delivery commitments, control transportation costs, evaluate carrier performance, and support customer service.
+
+Recommendation: I would position this project around end-to-end traceability, transportation performance management, and secure customer integration.
+
+Its strongest differentiator is the scope of tracking: it goes beyond shipment dispatch and delivery to cover the product's complete journey, including manufacturing, installation, oil filling, and start-up at the customer site.
+
+The separate Internet-facing component is also worth retaining because it demonstrates a practical architectural solution to security constraints while extending access to customers and mobile users.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

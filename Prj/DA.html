@@ -1,18 +1,205 @@
-<td>
-<table>
- <TR>
-  <td>
-  </br><b>Revenue Analytics & Global Data Platform</b>
-  </br>This project involved the analysis, integration, and development of a global data and analytics solution for the Revenue organization, designed to consolidate commercial information from multiple ERP systems across different countries and transform it into actionable intelligence for sales, pricing, promotions, distribution, customer management, and revenue strategy. The solution established a cloud-based Data Warehouse/Data Lake environment as a centralized foundation for global commercial information and provided dashboards, graphical analytics, and business enablers that allowed users to move from consolidated performance indicators to detailed analysis of the underlying business drivers.
-  </br>One of the most significant challenges was data quality and cleansing. Information originated from multiple ERP environments operating across different countries, with differences in structures, definitions, formats, and business processes. This was particularly challenging for commercial information related to prices and promotions, where inconsistencies in source data could directly affect the interpretation of revenue and sales performance. The solution therefore required substantial work to standardize, cleanse, reconcile, and integrate information before it could be reliably exposed through the analytical layer.
-  </br>The architecture established interconnections between several ERP systems around the world and the cloud-based Data Warehouse/Data Lake, creating a consolidated data foundation for the Revenue organization. This allowed information that previously existed across geographically distributed enterprise systems to be analyzed within a common framework, supporting global visibility while preserving the requirements of individual markets and data sources.
-  </br>The analytical solution covered multiple dimensions of commercial performance, including sales, pricing, promotions, strategic distribution, key customers, revenues, and competitive information. Dashboards and graphical indicators were designed to provide both high-level management visibility and the ability to investigate the factors contributing to business results. The resulting environment supported more informed analysis of commercial performance and helped the organization develop strategies around pricing, promotion, distribution, customer management, and revenue growth.
-  </br>Data privacy and regional regulatory requirements introduced an additional architectural challenge. The level of customer and transactional detail that could be exposed differed between regions, particularly between European environments vs for instance Mexican environment, based on different regulations. This required the solution to accommodate different levels of data granularity and different analytical capabilities depending on the applicable regional requirements. In Mexico, the permitted level of detail enabled more extensive drill-down capabilities, while the European context required stricter limitations on the exposure and analysis of detailed information. As a result, the solution required careful design across the complete data lifecycle, from integration and data modeling through to dashboards and presentation.
-  </br>The project was delivered using an Agile approach and achieved significant results within the global implementation program. Mexico became the only country among the approximately eight initial implementations to complete the full project scope. The complete implementation was delivered in less than one year. Within the first four months, the project delivered full scope for stage one, exceeding the level of functionality delivered by other countries while using a portion of the budget than others.
-  </br>The demonstrated business value and delivery results led to a extension of the engagement. This extension reflected the continued demand for the capabilities delivered by the solution and allowed the team to further develop the platform and its business value.
-  </br>Overall, the project transformed geographically distributed and heterogeneous commercial data into a common cloud-based analytical foundation for the Revenue organization. By combining global ERP integration, data cleansing and governance, privacy-aware architecture, analytical dashboards, and business-focused data enablers, the solution provided a scalable environment for understanding revenue performance and supporting decisions around sales, pricing, promotions, distribution, customers, and competitive strategy.
-  </td>
- </TR>
-</table>
-</td>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevant Projects</title>
 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #172033;
+            font-size: 28px;
+        }
+
+        .item {
+            background: #ffffff;
+            border: 1px solid #dfe4ea;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+        }
+
+        .item-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .item-header:hover {
+            background: #f8fafc;
+        }
+
+        .title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1e3a5f;
+        }
+
+        .toggle {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #1e3a5f;
+            border-radius: 50%;
+            background: white;
+            color: #1e3a5f;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .content {
+            display: none;
+            padding: 0 20px 20px 20px;
+            color: #4b5563;
+            line-height: 1.65;
+            font-size: 15px;
+            border-top: 1px solid #eef1f4;
+        }
+
+        .item.open .content {
+            display: block;
+        }
+
+        .item.open .toggle {
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .title {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Project: Revenue Analytics & Global Data Platform</h1>
+
+    <!-- 1 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">1. Challenge</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">           
+Commercial information was distributed across multiple ERP systems operating in different countries, with inconsistencies in data structures, definitions, formats, and business processes. These differences made it difficult to establish a reliable, consolidated view of global revenue performance, particularly for pricing, promotions, sales, and distribution.
+
+The organization needed a centralized analytical platform capable of integrating heterogeneous data sources, improving data quality, and providing actionable commercial insights while accommodating different regional privacy and regulatory requirements.
+
+The project also operated within a global implementation program with demanding delivery expectations, budget constraints, and a need to demonstrate business value quickly.
+
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">2. Objectives</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+- Establish a cloud-based Data Warehouse/Data Lake as a centralized foundation for global commercial information.
+- Integrate data from multiple international ERP systems into a consistent analytical environment.
+- Improve data quality through cleansing, standardization, reconciliation, and harmonization.
+- Provide dashboards and drill-down capabilities to analyze sales, pricing, promotions, distribution, key customers, revenue, and competitive performance.
+- Adapt data granularity and analytical capabilities to regional privacy and regulatory requirements.
+- Deliver the implementation using an Agile approach, maximizing scope and business value within the available timeline and budget.
+
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">3. Actions</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+- Analyzed business requirements and designed the integration of geographically distributed ERP systems with a cloud-based Data Warehouse/Data Lake.
+- Coordinated data integration and modeling activities to consolidate commercial information from multiple countries into a common analytical framework.
+- Addressed data quality challenges through cleansing, standardization, reconciliation, and harmonization of commercial data, particularly pricing and promotional information.
+- Developed dashboards, graphical indicators, and analytical capabilities that enabled users to move from high-level performance metrics to detailed investigation of business drivers.
+- Supported analysis across sales, pricing, promotions, strategic distribution, key customers, revenue performance, and competitive information.
+- Designed regional variations in data granularity and analytical access to accommodate differing privacy and regulatory requirements, including more restrictive detail-level access in European environments and broader permitted drill-down capabilities in Mexico.
+- Applied Agile delivery practices to prioritize functionality, coordinate implementation activities, and deliver the planned scope incrementally.
+- Focused on maximizing implementation scope and functionality within tight delivery and budget constraints, demonstrating the value of the solution early in the program.
+
+        </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">4. Results</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+- Successful full-scope implementation: Mexico became the only country among approximately eight initial implementations to complete the entire project scope.
+- Accelerated delivery: Delivered the complete implementation in less than one year.
+- Early delivery of full functionality: Completed the full scope of Stage 1 within the first four months, exceeding the functionality delivered by other participating countries.
+- Efficient use of budget: Delivered the Stage 1 scope using a smaller portion of the budget than other implementations, demonstrating strong delivery efficiency.
+- Consolidated commercial intelligence: Established a common cloud-based analytical foundation integrating information from multiple ERP systems.
+- Improved analytical capabilities: Enabled business users to analyze commercial performance across sales, pricing, promotions, distribution, customers, and revenue.
+- Regional compliance support: Accommodated different levels of data detail and analytical access according to applicable regional requirements.
+- Extended engagement: Demonstrated business value and delivery performance led to an extension of the engagement, enabling further development of the platform and its capabilities.
+
+        </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="item">
+        <div class="item-header" onclick="toggleItem(this)">
+            <div class="title">5. Business Impact</div>
+            <button class="toggle" aria-label="Expand">+</button>
+        </div>
+
+        <div class="content">
+Established a global commercial analytics platform that transformed fragmented, geographically distributed ERP information into a consolidated foundation for revenue intelligence and decision-making. The solution strengthened visibility into commercial performance and supported analysis of pricing, promotions, distribution, customer management, and revenue strategy while accommodating regional data privacy requirements.
+The successful Mexican implementation also demonstrated that the full solution could be delivered rapidly and efficiently, establishing a strong reference for the global program and contributing to the continuation of the engagement.
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
